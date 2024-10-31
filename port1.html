@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="portstyle.css"> 
+  <script defer src="portscript.js"></script>
+  <title>Document</title>
+
+</head>
+<body>
+  <section id="home" class="sec-1 ">
+    <nav class="navbar">
+      <div class="dropdown">
+        <button class="dropbtn">Menu</button>
+        <div class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+   
+     <div>
+      <div>
+        <h2 class="animate text2">
+          <small>Hello i'm</small>
+          <br>
+          Olah Micheal 
+        </h2>
+        <p class="text1 animate"> Web/App Dev & Network Engineer</p>
+        <div>
+          <input type="button" value="My work" class="btn1 animate" onclick="location.href='#mywork'">
+          <input type="button" value="Hire me " class="btn2 animate hire-me-button "  onclick="toggleDropdown()" >
+          <!-- Dropdown menu -->
+          
+          <div id="dropdownMenu" class="dropdown-menu animate">
+            <ul >
+              <li onclick="sendEmail('Web Development')">Web Development</li>
+              <li onclick="sendEmail('App Development')">App Development</li>
+              <li onclick="sendEmail('Networking')">Networking</li>
+              <li onclick="sendEmail('Others')">Others</li>
+            </ul>
+          </div>
+         
+        </div>
+      
+  </section>
+
+  <Section id="about" class="sec-4">
+    <h3>About Me <span class="showRight-animate"></span></h3>
+    <p>I am <span class="showRight-animate"></span> 
+      <span class="font-weight-bold">Oluwaferanmi Micheal</span> 
+      I'm a dedicated and highly skilled web and app developer who brings a blend of passion, experience, and professionalism to every project. With a strong work ethic, I focus on delivering quality solutions efficiently, ensuring that my clients receive timely, reliable, and high-performing services. I'm committed to maintaining the highest standards of excellence in my work, whether developing custom web applications or mobile apps tailored to a client’s needs.
+    </p>
+      <p>
+        I understands the importance of communication and collaboration in achieving project goals. My clients benefit from a seamless workflow, clear communication, and a strong emphasis on meeting deadlines without compromising on quality. My work experience spans multiple industries, allowing me to bring innovative solutions to diverse challenges.
+        <span class="showRight-animate"></span>
+      </p>
+      <p>
+        With a keen interest in staying up-to-date with the latest technologies, frameworks, and best practices,  I ensures that my  clients receive cutting-edge solutions that are not only functional but also scalable and secure. Whether you're a company looking for a robust app, a website, or a tailored digital solution, I focus on efficiency, creativity, and client satisfaction will make him the ideal partner for your project. 
+        <span class="showRight-animate"></span>
+      </p>
+      <h6 >Experience <span class="showRight-animate"></span></h6>
+      <p>Web dev <span class="showRight-animate"></span></p>
+      <p>
+        I have one and a half years of experience in web development, gained through working on various independent projects. During this time, I have primarily collaborated with individuals seeking web-based solutions to address a range of challenges. My expertise in web development includes proficiency in HTML, CSS, and JavaScript, which I commonly use to build responsive and functional web applications.
+        <span class="showRight-animate"></span>
+      </p>
+
+      <p>App dev <span class="showRight-animate"></span></span>
+      </p>
+          <p>
+            I have a year and a half of experience in application development, primarily gained through working on various independent projects. During this time, I have collaborated with individuals to provide tailored app solutions to address their specific needs. My development work primarily utilizes technologies such as Flutter, Dart, and React.js for building web applications.
+            <span class="showRight-animate"></span>
+          </p>
+
+          <p>Networking <span class="showRight-animate"></span></p>
+          <p>
+            I possess one year of practical experience in networking, acquired during my tenure at Matrix Energy Group. Throughout this period, I have developed a strong proficiency in resolving a wide range of network-related issues, including the installation and configuration of network servers and extensions, IP CCTV systems, and access control systems.
+            <span class="showRight-animate"></span>
+          </p>
+          <p> 
+            Additionally, I am adept at troubleshooting and providing solutions for various other networking challenges, ensuring efficient and seamless operations across different platforms and setups, etc.
+            <span class="showRight-animate"></span>
+          </p>
+          <p>Hardware maintenance <span class="showRight-animate"></span></p>
+          <p>
+            I also have one year of experience in computer hardware and software maintenance, gained while working at Matrix Energy Group. I am skilled in diagnosing, troubleshooting, and providing effective solutions for both hardware and software components in PCs and desktops of any type.
+            <span class="showRight-animate"></span>
+          </p>
+  </Section>
+
+  <section id="services" class="sec-2">
+    <h3 >Services<span class="showRight-animate"></span></h3>
+    <div class="card-container animate" id="mywork">
+      <div class="card animate" id="web-dev" style="--i:0;">
+        <div class="card-icon">🌐</div>
+        <div class="card-title">Web Development</div>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="card animate" id="app-dev" style="--i:1;">
+        <div class="card-icon">📱</div>
+        <div class="card-title">App Development</div>
+        <div class="card-content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <div class="card animate" id="networking" style="--i:2;">
+        <div class="card-icon">🔌</div>
+        <div class="card-title">Networking</div>
+        <div class="card-content">
+          <p>Networking solutions to ensure secure and reliable connectivity for your organization. Solutions include router setup, CCTV installation, and infrastructure management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<Section id="contact" class="sec-3">
+  <div class="contact-section animate">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="issue" rows="5" placeholder="Describe your issue" required></textarea>
+        <button type="button" onclick="sendMessage()">Submit</button>
+    </form>
+</div>
+</Section>
+    <!-- Footer Section -->
+    <footer>
+      <ul class="social-icons">
+          <!-- Twitter Icon -->
+          <li><a href="https://x.com/olahmichael2?t=5QkZ8ytJIc80tF95HikxlQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a></li>
+
+          <!-- WhatsApp Icon -->
+          <li><a href="https://wa.me/+2349123540102" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+
+          <!-- Email Icon -->
+          <li><a href="mailto:olahmicheal10@gmail.com"><i class="fas fa-envelope"></i></a></li>
+
+          <!-- LinkedIn Icon -->
+          <li><a href="https://www.linkedin.com/in/oluwaferanmi-michael-2b67b2321?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BceGZiRt4SQuQzXhG0vz9SQ%3D%3D" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+
+          <!-- GitHub Icon -->
+          <li><a href="https://github.com/YourGitHubProfile" target="_blank"><i class="fab fa-github"></i></a></li>
+      </ul>
+
+      <p>&copy; 2024 Olah Micheal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
