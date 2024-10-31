@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
+ 
 }
 
 p{
@@ -209,8 +209,7 @@ margin-left: 10%;
   justify-content: center;
   gap: 30px; /* Space between cards */
   margin-top: 200px;
-
-
+ 
 }
 .sec-2 .show-animate.card-container{
   transform: translateX(0);
@@ -220,7 +219,7 @@ margin-left: 10%;
   height: 200px;
   overflow: hidden;
   position: relative;
-  background-color: #fff;
+ background-image: url(/background3.webp);
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: width 0.5s ease, height 0.5s ease;
@@ -233,7 +232,7 @@ margin-left: 10%;
 .card .card-icon {
   font-size: 2rem;
   padding: 15px;
-  color: #007bff;
+  color: #7e868f;
 }
 
 .card .card-title {
@@ -251,7 +250,7 @@ margin-left: 10%;
 
 .card.expanded {
   width: 400px; /* Expanded width */
-  height: 300px; /* Expanded height */
+  height: 350px; /* Expanded height */
   overflow-y: auto; /* Enable scrolling for long text */
 }
 
@@ -276,6 +275,7 @@ margin-left: 10%;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  background-image: url(/background1.0.webp);
 }
 .contact-section h2 {
   text-align: center;
