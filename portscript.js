@@ -1,21 +1,58 @@
 
+
+// Select all sections
 let sections = document.querySelectorAll('section');
 
-window.onscroll= ()=>{
-sections.forEach( sec=>{
+// Function to handle scroll-triggered animations
+function handleScrollAnimations() {
+  sections.forEach((sec, index) => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 300;  // Adjust offset for earlier animation trigger
+    let height = sec.offsetHeight;
 
-  let top= window.scrollY;
-  let offset= sec.offsetTop -150;
-  let height =sec.offsetHeight;
-
-  if( top>= offset && top< offset + height){
-    sec.classList.add('show-animate')
-  }
-  else{
-    sec.classList.remove('show-animate')
-  }
-})
+    if (top >= offset && top < offset + height) {
+      sec.classList.add('show-animate');
+    } else {
+      sec.classList.remove('show-animate');
+    }
+  });
 }
+
+// Run animations for the first section when the page loads
+window.addEventListener('load', () => {
+  // Trigger animation for the first section without scrolling
+  sections[0].classList.add('show-animate');
+});
+
+// Attach the scroll event to trigger animations based on scroll position
+window.onscroll = handleScrollAnimations;
+
+// Create an IntersectionObserver to trigger animations on scroll
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Trigger specific animation based on class
+      if (entry.target.classList.contains('pro-value1')) {
+        entry.target.style.animation = 'load1 3s forwards';
+      } else if (entry.target.classList.contains('pro-value2')) {
+        entry.target.style.animation = 'load2 3s forwards';
+      } else if (entry.target.classList.contains('pro-value3')) {
+        entry.target.style.animation = 'load3 3s forwards';
+      } else if (entry.target.classList.contains('pro-value4')) {
+        entry.target.style.animation = 'load4 3s forwards';
+      } else if (entry.target.classList.contains('pro-value5')) {
+        entry.target.style.animation = 'load5 3s forwards';
+      }
+      observer.unobserve(entry.target); // Stop observing after animation starts
+    }
+  });
+}, { threshold: 0.5 }); // Start animation when 50% of the element is visible
+
+// Select all progress elements and observe them
+document.querySelectorAll('.progress div').forEach((progressBar) => {
+  observer.observe(progressBar);
+});
+
 
 function toggleDropdown() {
   const dropdown = document.getElementById('dropdownMenu');

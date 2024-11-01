@@ -13,7 +13,7 @@ p{
   position: relative;
   font-size: 1.2rem;
   font-weight: 3px;
-  padding:5px;
+  padding:5px; 
   margin: 10px 4%;
 
 }
@@ -119,7 +119,7 @@ section{
 margin-left: 10%;
 }
 .text2{
-  margin-top: 30px;
+  margin-top: 8%;
 }
 /* this section is for the two button on the home page */
 .btn1{
@@ -197,6 +197,99 @@ margin-left: 10%;
 
 .dropdown-menu li:hover {
   background-color: #ddd;
+}
+ 
+/* Main container to hold both About and Progress sections */
+.abt1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Ensure both sections take up equal space */
+.abt2, .progress-bar {
+  flex: 1;
+  min-width: 300px; /* Ensures wrapping on smaller screens */
+}
+
+/* About section styling */
+.abt2 {
+  padding: 20px;
+  max-width: 700px;
+}
+
+/* Progress Bars Section */
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+
+}
+
+/* Progress Bar Styling */
+.progress {
+  background-color: rgb(197, 196, 195);
+  justify-content: flex-start;
+  border-radius: 50px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  height: 25px;
+  width: 100%;
+  box-shadow: 15px 11px 22px -9px rgba(0, 0, 0, 0.75);
+  color: grey;
+}
+
+.my-3 {
+  margin: 20px 0;
+}
+
+.pro-value1, .pro-value2, .pro-value3, .pro-value4, .pro-value5 {
+  border-radius: 50px;
+  background-color: black;
+  height: 25px;
+  width: 0;
+
+}
+
+.progress p {
+  color: black;
+  padding: 12px;
+}
+
+/* Progress Bar Animation Keyframes */
+@keyframes load1 {
+  0% { width: 0; }
+  100% { width: 95%; }
+}
+
+@keyframes load2 {
+  0% { width: 0; }
+  100% { width: 80%; }
+}
+
+@keyframes load3 {
+  0% { width: 0; }
+  100% { width: 70%; }
+}
+
+@keyframes load4 {
+  0% { width: 0; }
+  100% { width: 50%; }
+}
+
+@keyframes load5 {
+  0% { width: 0; }
+  100% { width: 90%; }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .abt1 {
+    flex-direction: column;
+  }
 }
 
 
